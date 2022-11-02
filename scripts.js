@@ -28,6 +28,7 @@ function szam(tipp) {
         else if(tipp == eltalalandoSzam) {
             document.getElementById("demo").innerHTML = "Eltalátad a számot!";
             document.getElementById("demo").style.color = "lime";
+            proba += 1;
             return true;
         }
 
@@ -40,11 +41,9 @@ document.getElementById("button").addEventListener("click", function() {
     const inputTipp = document.getElementById("tipp").value;
 
         if(szam(inputTipp) == false) {
-            console.log("nem talált");
             document.getElementById("proba").innerHTML = "Találgatások száma: " + proba;
         }
         else{
-            console.log("talált");
             document.getElementById("proba").innerHTML = "Találgatások száma: " + proba;
         }
     
