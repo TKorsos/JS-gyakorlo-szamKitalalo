@@ -61,16 +61,16 @@ div.container > div {
     background-color: red;
 }
 
-#button { 
+#button, #newGame { 
     width: 25%;
     border: 1px solid goldenrod;
     border-radius: 8px;
 }
 
-#button:hover {
+#button:hover, #newGame:hover {
     background-color: goldenrod;
 }
 
-#button:active {
+#button:active, #newGame:active {
     box-shadow: 0 0 10px white;
 }
