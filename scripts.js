@@ -1,6 +1,4 @@
 
-// ismétlés
-
 // az eltalálandó szám meghatározása ~ 221104 módosítás
 let eltalalandoSzam;
 let proba;
@@ -8,7 +6,8 @@ let proba;
 // tippgomb eltüntetése ~ 221104
 document.getElementById("button").style.display = "none";
 
-// tipp mező disabled
+// tipp mező disabled/ readonly
+//document.getElementById("tipp").readOnly = true;
 document.getElementById("tipp").disabled = true;
 
 // játék indítása ~ 221104
@@ -20,6 +19,7 @@ document.getElementById("newGame").addEventListener("click", function() {
     // játék utáni új játék
     document.getElementById("proba").innerHTML = "Hányadikra sikerül eltalálni?";
     document.getElementById("demo").innerHTML = "<br>";
+    //document.getElementById("tipp").readOnly = false;
     document.getElementById("tipp").disabled = false;
 })
 
@@ -52,6 +52,9 @@ function szam(tipp) {
             // tipp gomb eltűntetése és új gomb megjelenítése ~ 221104
             document.getElementById("newGame").style.display = "inline-block";
             document.getElementById("button").style.display = "none";
+            //document.getElementById("tipp").readOnly = true;
+            document.getElementById("tipp").disabled = true;
+            document.getElementById("tipp").value = "";
             return true;
         }
 
